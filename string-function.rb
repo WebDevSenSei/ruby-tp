@@ -188,3 +188,4 @@ puts "\"hello \\n ''\"".undump
 puts '--------------upto---------------'
 
 "a80".upto("b10") {|s| print s, ' ' }
+"a80".upto("b10") {|s| print s, ' ' }
