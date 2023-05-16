@@ -83,4 +83,28 @@ puts '--------count-----------------------------'
 
 p a.count
 p a.count(nil)
-a.count {|x| x%2 == 0}
+p a.count {|x| x && x%2 == 0}
+
+puts '--------cycle-----------------------------'
+
+p a.cycle(2).to_a
+a.cycle(2) { |x| p x.nil? ? 123 : x }
+
+puts '--------delete-----------------------------'
+
+a.delete(nil)
+a.delete_at(0)
+p a
+a.delete_if { |x| x % 2 == 1  }
+p a
+
+puts '--------difference-----------------------------'
+
+p a.difference([1,4,5])
+p a - [1,4,5]
+
+puts '--------dig-----------------------------'
+
+a = [[1,[2,3]],4]
+# p a.dig(0,0)
+p a.dig(0,0,0)
