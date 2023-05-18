@@ -114,3 +114,11 @@ puts '--------drop-----------------------------'
 a = [1,3,5,7,9,2,4,6,8,0]
 p a.drop(1)
 p a.drop_while { |i| i < 7}
+
+puts '--------each-----------------------------'
+ret = []
+a.each { |x| ret.push(x + 1)  }
+p ret 
+ret = []
+p a.each_index { |x| ret.push(x) }
+p ret
