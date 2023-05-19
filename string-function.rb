@@ -189,3 +189,10 @@ puts '--------------upto---------------'
 
 "a80".upto("b10") {|s| print s, ' ' }
 "a80".upto("b10") {|s| print s, ' ' }
+
+
+puts '--------------valid_encoding---------------'
+ 
+puts "\xc2\xa1".force_encoding("UTF-8").valid_encoding? 
+p "\xc2".force_encoding("UTF-8").valid_encoding?     
+p "\x80".force_encoding("UTF-8").valid_encoding? 
